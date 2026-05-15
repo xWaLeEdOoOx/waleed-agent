@@ -9,8 +9,6 @@ No vector database.
 No orchestration maze.  
 Just tools.
 
----
-
 # What is this?
 
 `waleed-agent` is a tiny local agent runtime designed to give existing LLMs “hands and feet”.
@@ -31,8 +29,6 @@ Under the hood it:
 The goal is simple:
 
 > Give local LLMs safe workspace access without the bloat of modern agent frameworks (Hence the Digital Hands and Feet). 
-
----
 
 # Philosophy
 
@@ -56,8 +52,6 @@ The agent simply provides secure execution capabilities.
 
 > Think of it as prosthetics for your LLM — not a replacement brain.
 
----
-
 # Why I Built This
 
 I wanted:
@@ -80,8 +74,6 @@ I just needed a clean way to give models controlled access to:
 
 So I built `waleed-agent`.
 
----
-
 # Features
 
 - Single portable binary
@@ -95,8 +87,6 @@ So I built `waleed-agent`.
 - Frontend agnostic
 - Model agnostic
 - MIT licensed
-
----
 
 # Security Model
 
@@ -130,8 +120,6 @@ While significant effort is being placed into security and sandboxing, this proj
 - Security hardening is ongoing and remains the primary focus before a stable `v1.0`.
 - Please take your time reading and configuring the config file, especially the allowed and denied commands, this is the most important feature and every system and usecase is unique so i did not hardcode force anything that's why `waleed-agent` will not run without a config file beside it.
 - You can add waleed-agent to your shell / system variables to call it from any folder/directory.
-
----
 
 # Architecture
 
