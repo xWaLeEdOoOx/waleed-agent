@@ -1,6 +1,6 @@
 # waleed-agent
 
-A lightweight, single-binary capability bridge that gives any local LLM safe access to your filesystem and terminal through an OpenAI-compatible API.
+A lightweight, single-binary capability bridge that gives any local LLM safe access to a filesystem and terminal acess to a workspace in your filesystem through an OpenAI-compatible API.
 
 No bloated agent framework.  
 No vector database.  
@@ -28,7 +28,7 @@ Under the hood it:
 
 The goal is simple:
 
-> Give local LLMs safe workspace access without the bloat of modern agent frameworks.
+> Give local LLMs safe workspace access without the bloat of modern agent frameworks (Hence the Digital Hands and Feet). 
 
 ---
 
@@ -46,7 +46,7 @@ Most AI agent projects try to become:
 
 This project focuses on one thing only:
 
-> Extending an LLM with local capabilities.
+> Extending an LLM with controlled local access capabilities.
 
 The intelligence remains in the model.  
 The frontend remains your choice.  
