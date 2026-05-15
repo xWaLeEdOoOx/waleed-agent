@@ -1,2 +1,137 @@
 # waleed-agent
-A Tiny &amp; Ultra-liteweight Agent to give your LLM Hands and Feet.
+
+A lightweight, single-binary capability bridge that gives any local LLM safe access to your filesystem and terminal through an OpenAI-compatible API.
+
+No bloated agent framework.  
+No vector database.  
+No orchestration maze.  
+Just tools.
+
+---
+
+# What is this?
+
+`waleed-agent` is a tiny local agent runtime designed to give existing LLMs “hands and feet”.
+
+It sits between:
+- your favorite chat frontend
+- your preferred LLM
+- and your local workspace
+
+The agent exposes an OpenAI-compatible endpoint (`/v1/chat/completions`) that any compatible UI or application can connect to.
+
+Under the hood it:
+- forwards requests to your upstream LLM
+- executes approved local tools
+- safely restricts access to a jailed workspace
+- returns results back to the client as if the model had native local capabilities
+
+The goal is simple:
+
+> Give local LLMs safe workspace access without the bloat of modern agent frameworks.
+
+---
+
+# Philosophy
+
+Most AI agent projects try to become:
+- an IDE
+- an orchestration engine
+- a workflow platform
+- a memory system
+- a cloud service
+- an autonomous ecosystem
+
+`waleed-agent` intentionally does not.
+
+This project focuses on one thing only:
+
+> Extending an LLM with local capabilities.
+
+The intelligence remains in the model.  
+The frontend remains your choice.  
+The agent simply provides secure execution capabilities.
+
+Think of it as prosthetics for your LLM — not a replacement brain.
+
+---
+
+# Why I Built This
+
+I wanted:
+- a tiny standalone binary
+- no Docker
+- no Node.js dependency forest
+- no Python environments
+- no bundled frontend
+- no hidden orchestration layers
+
+I already had:
+- local models
+- OpenAI-compatible APIs
+- chat frontends I liked
+
+I just needed a clean way to give models controlled access to:
+- files
+- directories
+- terminal execution
+
+So I built `waleed-agent`.
+
+---
+
+# Features
+
+- Single portable binary
+- OpenAI-compatible API
+- Workspace-jail enforcement
+- File operations
+- Terminal execution
+- Streaming support
+- Minimal dependencies
+- Cross-platform architecture
+- Frontend agnostic
+- Model agnostic
+- MIT licensed
+
+---
+
+# Security Model
+
+Security is the defining priority of this project.
+
+All operations are designed around strict workspace containment.
+
+## Current protections
+
+- Filesystem jail enforcement
+- Rejection of absolute paths
+- Rejection of `..` traversal
+- Configurable command restrictions
+- Command timeouts
+- Output size limits
+- Environment variable whitelisting
+- API keys are never logged
+
+## Important Warning
+
+`waleed-agent` is currently experimental software.
+
+While significant effort is being placed into security and sandboxing, this project should currently be treated as:
+
+> Trusted local tooling for controlled environments.
+
+Do NOT expose it directly to the internet.  
+Do NOT use it with untrusted prompts or users.  
+Security hardening is ongoing and remains the primary focus before a stable `v1.0`.
+
+---
+
+# Architecture
+
+```text
+Frontend/UI
+    ↓
+waleed-agent
+    ↓
+Local or Remote LLM API
