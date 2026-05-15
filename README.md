@@ -1,3 +1,5 @@
+<img width="1880" height="570" alt="waleed-agent-banner" src="https://github.com/user-attachments/assets/14691303-1f61-4c71-a34a-b679871de4d2" />
+
 # waleed-agent
 
 A lightweight, single-binary capability bridge that gives any local LLM safe access to a filesystem and terminal acess to a workspace in your filesystem through an OpenAI-compatible API.
