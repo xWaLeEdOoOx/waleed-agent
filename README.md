@@ -52,7 +52,7 @@ The intelligence remains in the model.
 The frontend remains your choice.  
 The agent simply provides secure execution capabilities.
 
-Think of it as prosthetics for your LLM — not a replacement brain.
+> Think of it as prosthetics for your LLM — not a replacement brain.
 
 ---
 
@@ -113,7 +113,7 @@ All operations are designed around strict workspace containment.
 - Environment variable whitelisting
 - API keys are never logged
 
-**(All configurable in the config file, I intentially did not hardcore any possible configurations for extreme flixablity).**
+> (All configurable in the config file, I intentially did not hardcore any possible configurations for extreme flixablity).
 
 ## Important Warning
 
@@ -127,7 +127,7 @@ While significant effort is being placed into security and sandboxing, this proj
 - Do NOT use it with untrusted prompts or users.  
 - Security hardening is ongoing and remains the primary focus before a stable `v1.0`.
 - Please take your time reading and configuring the config file, especially the allowed and denied commands, this is the most important feature and every system and usecase is unique so i did not hardcode force anything that's why `waleed-agent` will not run without a config file beside it.
-- You can add waleed-agent to your shell / system variables to call it from anywhere in any folder/directory
+- You can add waleed-agent to your shell / system variables to call it from any folder/directory.
 
 ---
 
@@ -168,4 +168,4 @@ Configuration is managed via a hierarchy:
 3.  `waleed-agent.default.json` in the binary directory
 4.  Current Working Directory (CWD)
 
-For a complete list of all options, refer to the [TECHSPEC.md](TECHSPEC.md).
+> For a complete list of all options, refer to the [TECHSPEC.md](TECHSPEC.md).
