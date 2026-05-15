@@ -141,7 +141,7 @@ Local or Remote LLM API
 
 ## Quickstart
 
-# Building from source:
+### Building from source:
 
 1.  **Download/Build:**
     ```bash
@@ -154,7 +154,7 @@ Local or Remote LLM API
 3.  **Connect:**
     Connect your chat UI to `http://localhost:8484/v1/chat/completions`.
 
-# Using pre-compiled release binaries:
+### Using pre-compiled release binaries:
 
 - Just unzip it, move it and it's config file to any folder/directory you want and run it!! Dead simple.
 
