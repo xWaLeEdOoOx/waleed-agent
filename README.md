@@ -102,7 +102,7 @@ Security is the defining priority of this project.
 
 All operations are designed around strict workspace containment.
 
-## Current protections
+## Current protections (All configurable in the config file, I intentially did not hardcore any possible configurations for extreme flixablity).
 
 - Filesystem jail enforcement
 - Rejection of absolute paths
@@ -121,9 +121,11 @@ While significant effort is being placed into security and sandboxing, this proj
 
 > Trusted local tooling for controlled environments.
 
-Do NOT expose it directly to the internet.  
-Do NOT use it with untrusted prompts or users.  
-Security hardening is ongoing and remains the primary focus before a stable `v1.0`.
+- Do NOT expose it directly to the internet.  
+- Do NOT use it with untrusted prompts or users.  
+- Security hardening is ongoing and remains the primary focus before a stable `v1.0`.
+- Please take your time reading and configuring the config file, especially the allowed and denied commands, this is the most important feature and every system and usecase is unique so i did not hardcode force anything that's why `waleed-agent` will not run without a config file beside it.
+- You can add waleed-agent to your shell / system variables to call it from anywhere in any folder/directory
 
 ---
 
@@ -135,3 +137,33 @@ Frontend/UI
 waleed-agent
     ↓
 Local or Remote LLM API
+```
+
+## Quickstart
+
+# Building from source:
+
+1.  **Download/Build:**
+    ```bash
+    go build -o waleed-agent ./cmd/waleed-agent
+    ```
+2.  **Run:**
+    ```bash
+    ./waleed-agent
+    ```
+3.  **Connect:**
+    Connect your chat UI to `http://localhost:8484/v1/chat/completions`.
+
+# Using pre-compiled release binaries:
+
+- Just unzip it, move it and it's config file to any folder/directory you want and run it!! Dead simple.
+
+## Configuration
+
+Configuration is managed via a hierarchy:
+1.  `--config` CLI flag
+2.  `waleed-agent.json` in the workspace directory
+3.  `waleed-agent.default.json` in the binary directory
+4.  Current Working Directory (CWD)
+
+For a complete list of all options, refer to the [TECHSPEC.md](TECHSPEC.md).
